@@ -21,11 +21,11 @@ export default async function handler(req,res){
  if(Buffer.byteLength(JSON.stringify(input))>3000000)return send(413,{error:'Upload is too large. Use a photo under 2 MB.'});
  try{
   if(input.action==='upload'){
-   const f=input.file;if(!f||!['image/jpeg','image/png'].includes(f.type)||typeof f.base64!=='string'||!f.base64.match(/^[A-Za-z0-9+/]*={0,2}$/))return send(400,{error:'Please choose a JPG or PNG image.'});
-   const bytes=Buffer.from(f.base64,'base64');if(!bytes.length||bytes.length>2000000)return send(413,{error:'Photo must be smaller than 2 MB.'});
-   const png=bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]));const jpg=bytes[0]===255&&bytes[1]===216&&bytes[2]===255;
-   if((f.type==='image/png'&&!png)||(f.type==='image/jpeg'&&!jpg))return send(400,{error:'The file content does not match its image type.'});
-   const upload=await provider('/s2s/v2.0/file','POST',{files:[{content_type:f.type,file_name:f.type==='image/png'?'studio.png':'studio.jpg',file_size:bytes.length}]});
+   const f=input.file;if(!f||!['image/jpeg','image/png','video/mp4'].includes(f.type)||typeof f.base64!=='string'||!f.base64.match(/^[A-Za-z0-9+/]*={0,2}$/))return send(400,{error:'Please choose a JPG, PNG or MP4 file.'});
+   const bytes=Buffer.from(f.base64,'base64');if(!bytes.length||bytes.length>2000000)return send(413,{error:'File must be smaller than 2 MB.'});
+   const png=bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10]));const jpg=bytes[0]===255&&bytes[1]===216&&bytes[2]===255;const mp4=bytes.subarray(4,8).toString()==='ftyp';
+   if((f.type==='image/png'&&!png)||(f.type==='image/jpeg'&&!jpg)||(f.type==='video/mp4'&&!mp4))return send(400,{error:'The file content does not match its image type.'});
+   const upload=await provider('/s2s/v2.0/file','POST',{files:[{content_type:f.type,file_name:f.type==='image/png'?'studio.png':f.type==='video/mp4'?'studio.mp4':'studio.jpg',file_size:bytes.length}]});
    const file=upload.data?.files?.[0];const request=file?.requests?.[0];if(!request||!file.file_id)throw new Error('YouCam did not provide an upload destination.');
    const url=new URL(request.url);if(url.protocol!=='https:'||!url.hostname.endsWith('.amazonaws.com')||request.method!=='PUT')throw new Error('Unexpected provider upload destination.');
    const headers={};for(const [k,v]of Object.entries(request.headers||{}))if(['content-type','content-length','x-amz-acl','x-amz-server-side-encryption'].includes(k.toLowerCase()))headers[k]=String(v);
