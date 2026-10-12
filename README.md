@@ -4,8 +4,8 @@ An independent creative studio by ISAGALA MARK. Explore fashion, jewelry, beauty
 
 ## Current implementation
 
-- Responsive studio, searchable catalog, seven categories, 61 documented tools and 77 versioned task operations.
-- Controls generated from a snapshot of Perfect Corp's official OpenAPI request schemas, retrieved October 12, 2026. Simple fields become controls; complex inputs can be supplied through advanced JSON. This is a universal API workspace, not 61 independently polished workflows.
+- Responsive studio, searchable catalog, seven categories, 63 documented tools and 79 versioned task operations.
+- Controls generated from a snapshot of Perfect Corp's official OpenAPI request schemas, retrieved October 12, 2026. Simple fields become controls; complex inputs can be supplied through advanced JSON. This is a universal API workspace, not 63 independently polished workflows.
 - Server-only YouCam authentication, JPEG/PNG uploads, task creation, signed task receipts, polling, media/analysis result display, original/result comparison and a device-local result collection.
 - Private studio access code protects shared credits. Images and studio code are not saved by the app; saved result links may expire. YouCam retains provider uploads according to its policy.
 - No fake AI results or paid checkout. Demo connection is unavailable until BOTH server variables are configured.
