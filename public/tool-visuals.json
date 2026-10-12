@@ -1,0 +1,506 @@
+{
+  "ai_abs_filter": {
+    "image": "/assets/tools/ai_abs_filter.webp",
+    "atlas": "skin",
+    "index": 0,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore an athletic contour preview."
+  },
+  "ai_aging_simulation": {
+    "image": "/assets/tools/ai_aging_simulation.webp",
+    "atlas": "skin",
+    "index": 1,
+    "cols": 3,
+    "rows": 4,
+    "description": "Imagine how a face might change with age."
+  },
+  "ai_avatar_generator": {
+    "image": "/assets/tools/ai_avatar_generator.webp",
+    "atlas": "image",
+    "index": 0,
+    "cols": 4,
+    "rows": 4,
+    "description": "Turn a portrait into a new character."
+  },
+  "ai_background_removal": {
+    "image": "/assets/tools/ai_background_removal.webp",
+    "atlas": "image",
+    "index": 1,
+    "cols": 4,
+    "rows": 4,
+    "description": "Keep the subject. Clear the background."
+  },
+  "ai_bag": {
+    "image": "/assets/tools/ai_bag.webp",
+    "atlas": "fashion",
+    "index": 0,
+    "cols": 3,
+    "rows": 2,
+    "description": "See a new bag with your look."
+  },
+  "ai_bangs": {
+    "image": "/assets/tools/ai_bangs.webp",
+    "atlas": "hair",
+    "index": 0,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore a fringe without the haircut."
+  },
+  "ai_beard_style": {
+    "image": "/assets/tools/ai_beard_style.webp",
+    "atlas": "hair",
+    "index": 1,
+    "cols": 3,
+    "rows": 4,
+    "description": "Preview a new beard shape."
+  },
+  "ai_body_reshape": {
+    "image": "/assets/tools/ai_body_reshape.webp",
+    "atlas": "skin",
+    "index": 2,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore a different silhouette."
+  },
+  "ai_bracelet": {
+    "image": "/assets/tools/ai_bracelet.webp",
+    "atlas": "jewelry",
+    "index": 0,
+    "cols": 3,
+    "rows": 2,
+    "description": "Try a little shine on your wrist."
+  },
+  "ai_breast_augmentation": {
+    "image": "/assets/tools/ai_breast_augmentation.webp",
+    "atlas": "skin",
+    "index": 3,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore a cosmetic contour simulation."
+  },
+  "ai_clothes": {
+    "image": "/assets/tools/ai_clothes.webp",
+    "atlas": "fashion",
+    "index": 1,
+    "cols": 3,
+    "rows": 2,
+    "description": "Preview an outfit before deciding."
+  },
+  "ai_color_correction": {
+    "image": "/assets/tools/ai_color_correction.webp",
+    "atlas": "image",
+    "index": 2,
+    "cols": 4,
+    "rows": 4,
+    "description": "Give your photo balanced, natural colors."
+  },
+  "ai_earrings": {
+    "image": "/assets/tools/ai_earrings.webp",
+    "atlas": "jewelry",
+    "index": 1,
+    "cols": 3,
+    "rows": 2,
+    "description": "Find your next finishing touch."
+  },
+  "ai_eye_color_lens": {
+    "image": "/assets/tools/ai_eye_color_lens.webp",
+    "atlas": "beauty",
+    "index": 0,
+    "cols": 3,
+    "rows": 3,
+    "description": "Explore a different eye-color lens."
+  },
+  "ai_fabric": {
+    "image": "/assets/tools/ai_fabric.webp",
+    "atlas": "fashion",
+    "index": 2,
+    "cols": 3,
+    "rows": 2,
+    "description": "Explore a fresh material or texture."
+  },
+  "ai_face_analyzer": {
+    "image": "/assets/tools/ai_face_analyzer.webp",
+    "atlas": "skin",
+    "index": 4,
+    "cols": 3,
+    "rows": 4,
+    "description": "Discover facial proportions and attributes."
+  },
+  "ai_face_lift": {
+    "image": "/assets/tools/ai_face_lift.webp",
+    "atlas": "skin",
+    "index": 5,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore subtle facial contour changes."
+  },
+  "ai_face_reshape": {
+    "image": "/assets/tools/ai_face_reshape.webp",
+    "atlas": "skin",
+    "index": 6,
+    "cols": 3,
+    "rows": 4,
+    "description": "Preview a different facial silhouette."
+  },
+  "ai_face_swap": {
+    "image": "/assets/tools/ai_face_swap.webp",
+    "atlas": "image",
+    "index": 3,
+    "cols": 4,
+    "rows": 4,
+    "description": "Explore a face-swap creative concept."
+  },
+  "ai_fitzpatrick_skin_type": {
+    "image": "/assets/tools/ai_fitzpatrick_skin_type.webp",
+    "atlas": "skin",
+    "index": 7,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore cosmetic skin-type information."
+  },
+  "ai_hair_color": {
+    "image": "/assets/tools/ai_hair_color.webp",
+    "atlas": "hair",
+    "index": 2,
+    "cols": 3,
+    "rows": 4,
+    "description": "Find your next signature shade."
+  },
+  "ai_hair_density_detection": {
+    "image": "/assets/tools/ai_hair_density_detection.webp",
+    "atlas": "hair",
+    "index": 3,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore the density of visible hair."
+  },
+  "ai_hair_extension": {
+    "image": "/assets/tools/ai_hair_extension.webp",
+    "atlas": "hair",
+    "index": 4,
+    "cols": 3,
+    "rows": 4,
+    "description": "Imagine a little extra length."
+  },
+  "ai_hair_frizziness_detection": {
+    "image": "/assets/tools/ai_hair_frizziness_detection.webp",
+    "atlas": "hair",
+    "index": 5,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore visible frizz in your hair."
+  },
+  "ai_hair_length_detection": {
+    "image": "/assets/tools/ai_hair_length_detection.webp",
+    "atlas": "hair",
+    "index": 6,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore the length of your hair."
+  },
+  "ai_hair_type_detection": {
+    "image": "/assets/tools/ai_hair_type_detection.webp",
+    "atlas": "hair",
+    "index": 7,
+    "cols": 3,
+    "rows": 4,
+    "description": "Discover visible hair texture patterns."
+  },
+  "ai_hair_volume": {
+    "image": "/assets/tools/ai_hair_volume.webp",
+    "atlas": "hair",
+    "index": 8,
+    "cols": 3,
+    "rows": 4,
+    "description": "Imagine a fuller-looking hairstyle."
+  },
+  "ai_hairstyle": {
+    "image": "/assets/tools/ai_hairstyle.webp",
+    "atlas": "hair",
+    "index": 9,
+    "cols": 3,
+    "rows": 4,
+    "description": "Meet your next haircut before the salon."
+  },
+  "ai_hat": {
+    "image": "/assets/tools/ai_hat.webp",
+    "atlas": "fashion",
+    "index": 3,
+    "cols": 3,
+    "rows": 2,
+    "description": "Find a hat that completes your look."
+  },
+  "ai_headshot_generator": {
+    "image": "/assets/tools/ai_headshot_generator.webp",
+    "atlas": "image",
+    "index": 4,
+    "cols": 4,
+    "rows": 4,
+    "description": "Create a polished professional portrait."
+  },
+  "ai_image_extender": {
+    "image": "/assets/tools/ai_image_extender.webp",
+    "atlas": "image",
+    "index": 5,
+    "cols": 4,
+    "rows": 4,
+    "description": "Give your image more room to breathe."
+  },
+  "ai_image_generator": {
+    "image": "/assets/tools/ai_image_generator.webp",
+    "atlas": "image",
+    "index": 6,
+    "cols": 4,
+    "rows": 4,
+    "description": "Turn a few words into a visual idea."
+  },
+  "ai_look_vto": {
+    "image": "/assets/tools/ai_look_vto.webp",
+    "atlas": "beauty",
+    "index": 1,
+    "cols": 3,
+    "rows": 3,
+    "description": "Explore a complete beauty look."
+  },
+  "ai_makeup_transfer": {
+    "image": "/assets/tools/ai_makeup_transfer.webp",
+    "atlas": "beauty",
+    "index": 2,
+    "cols": 3,
+    "rows": 3,
+    "description": "Bring an inspiration makeup look to you."
+  },
+  "ai_nail_transfer": {
+    "image": "/assets/tools/ai_nail_transfer.webp",
+    "atlas": "beauty",
+    "index": 3,
+    "cols": 3,
+    "rows": 3,
+    "description": "Try nail art from a reference image."
+  },
+  "ai_nail_vto": {
+    "image": "/assets/tools/ai_nail_vto.webp",
+    "atlas": "beauty",
+    "index": 4,
+    "cols": 3,
+    "rows": 3,
+    "description": "Find the next color for your nails."
+  },
+  "ai_necklace": {
+    "image": "/assets/tools/ai_necklace.webp",
+    "atlas": "jewelry",
+    "index": 2,
+    "cols": 3,
+    "rows": 2,
+    "description": "See how a necklace frames your look."
+  },
+  "ai_object_removal_pro": {
+    "image": "/assets/tools/ai_object_removal_pro.webp",
+    "atlas": "image",
+    "index": 7,
+    "cols": 4,
+    "rows": 4,
+    "description": "Clear an unwanted detail from a photo."
+  },
+  "ai_photo_background_blur": {
+    "image": "/assets/tools/ai_photo_background_blur.webp",
+    "atlas": "image",
+    "index": 8,
+    "cols": 4,
+    "rows": 4,
+    "description": "Bring your subject into sharper focus."
+  },
+  "ai_photo_background_change": {
+    "image": "/assets/tools/ai_photo_background_change.webp",
+    "atlas": "image",
+    "index": 9,
+    "cols": 4,
+    "rows": 4,
+    "description": "Give your photo a whole new setting."
+  },
+  "ai_photo_colorize": {
+    "image": "/assets/tools/ai_photo_colorize.webp",
+    "atlas": "image",
+    "index": 10,
+    "cols": 4,
+    "rows": 4,
+    "description": "Bring a monochrome memory into color."
+  },
+  "ai_photo_enhance": {
+    "image": "/assets/tools/ai_photo_enhance.webp",
+    "atlas": "image",
+    "index": 11,
+    "cols": 4,
+    "rows": 4,
+    "description": "Bring clarity back to a favorite image."
+  },
+  "ai_photo_lighting": {
+    "image": "/assets/tools/ai_photo_lighting.webp",
+    "atlas": "image",
+    "index": 12,
+    "cols": 4,
+    "rows": 4,
+    "description": "Set a different mood with light."
+  },
+  "ai_replace": {
+    "image": "/assets/tools/ai_replace.webp",
+    "atlas": "image",
+    "index": 13,
+    "cols": 4,
+    "rows": 4,
+    "description": "Exchange one image detail for another."
+  },
+  "ai_scarf": {
+    "image": "/assets/tools/ai_scarf.webp",
+    "atlas": "fashion",
+    "index": 4,
+    "cols": 3,
+    "rows": 2,
+    "description": "Try a scarf as your finishing detail."
+  },
+  "ai_shoes": {
+    "image": "/assets/tools/ai_shoes.webp",
+    "atlas": "fashion",
+    "index": 5,
+    "cols": 3,
+    "rows": 2,
+    "description": "See a different pair in your outfit."
+  },
+  "ai_skin_analysis": {
+    "image": "/assets/tools/ai_skin_analysis.webp",
+    "atlas": "skin",
+    "index": 8,
+    "cols": 3,
+    "rows": 4,
+    "description": "See cosmetic skin insights from a photo."
+  },
+  "ai_skin_simulation": {
+    "image": "/assets/tools/ai_skin_simulation.webp",
+    "atlas": "skin",
+    "index": 9,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore a cosmetic skin appearance preview."
+  },
+  "ai_skin_tone_analysis": {
+    "image": "/assets/tools/ai_skin_tone_analysis.webp",
+    "atlas": "skin",
+    "index": 10,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore the color tones in your portrait."
+  },
+  "ai_smile": {
+    "image": "/assets/tools/ai_smile.webp",
+    "atlas": "skin",
+    "index": 11,
+    "cols": 3,
+    "rows": 4,
+    "description": "Explore a different smile in your photo."
+  },
+  "ai_studio_generator": {
+    "image": "/assets/tools/ai_studio_generator.webp",
+    "atlas": "image",
+    "index": 14,
+    "cols": 4,
+    "rows": 4,
+    "description": "Create a studio-inspired visual concept."
+  },
+  "ai_teeth_whitening": {
+    "image": "/assets/tools/ai_teeth_whitening.webp",
+    "atlas": "beauty",
+    "index": 5,
+    "cols": 3,
+    "rows": 3,
+    "description": "Preview a brighter-looking smile."
+  },
+  "ai_video_background_replace": {
+    "image": "/assets/tools/ai_video_background_replace.webp",
+    "atlas": "video",
+    "index": 0,
+    "cols": 3,
+    "rows": 2,
+    "description": "Give your video a different backdrop."
+  },
+  "ai_video_enhancer": {
+    "image": "/assets/tools/ai_video_enhancer.webp",
+    "atlas": "video",
+    "index": 1,
+    "cols": 3,
+    "rows": 2,
+    "description": "Bring clarity to a moving moment."
+  },
+  "ai_video_face_swap": {
+    "image": "/assets/tools/ai_video_face_swap.webp",
+    "atlas": "video",
+    "index": 2,
+    "cols": 3,
+    "rows": 2,
+    "description": "Explore a cinematic face-swap concept."
+  },
+  "ai_video_generator": {
+    "image": "/assets/tools/ai_video_generator.webp",
+    "atlas": "video",
+    "index": 3,
+    "cols": 3,
+    "rows": 2,
+    "description": "Turn a still idea into motion."
+  },
+  "ai_video_object_removal": {
+    "image": "/assets/tools/ai_video_object_removal.webp",
+    "atlas": "video",
+    "index": 4,
+    "cols": 3,
+    "rows": 2,
+    "description": "Clear distractions from a video."
+  },
+  "ai_video_style_transfer": {
+    "image": "/assets/tools/ai_video_style_transfer.webp",
+    "atlas": "video",
+    "index": 5,
+    "cols": 3,
+    "rows": 2,
+    "description": "Give your video a different visual style."
+  },
+  "ai_watch": {
+    "image": "/assets/tools/ai_watch.webp",
+    "atlas": "jewelry",
+    "index": 3,
+    "cols": 3,
+    "rows": 2,
+    "description": "Preview a different wristwatch."
+  },
+  "ai_watermark_removal": {
+    "image": "/assets/tools/ai_watermark_removal.webp",
+    "atlas": "image",
+    "index": 15,
+    "cols": 4,
+    "rows": 4,
+    "description": "Clean overlays from images you own."
+  },
+  "ai_wavy_hair": {
+    "image": "/assets/tools/ai_wavy_hair.webp",
+    "atlas": "hair",
+    "index": 10,
+    "cols": 3,
+    "rows": 4,
+    "description": "Try a wave without changing your hair."
+  },
+  "makeup_vto": {
+    "image": "/assets/tools/makeup_vto.webp",
+    "atlas": "beauty",
+    "index": 6,
+    "cols": 3,
+    "rows": 3,
+    "description": "Explore a new makeup palette."
+  },
+  "ring_vto": {
+    "image": "/assets/tools/ring_vto.webp",
+    "atlas": "jewelry",
+    "index": 4,
+    "cols": 3,
+    "rows": 2,
+    "description": "See a new ring on your hand."
+  }
+}

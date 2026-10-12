@@ -23,3 +23,7 @@ Short MP4 input support is implemented, with file header/type validation and the
 - Missing source/reference inputs are caught before uploading to YouCam. Input controls are locked during generation. Existing private credential and signed receipt protections remain.
 - The full 63-tool catalog remains accessible behind a disclosure. Each tool still needs individual live validation; advanced schema-heavy workflows remain technical.
 - No checkout, merchant product inventory, durable accounts or production quota ledger is implemented. The upgrade improves discovery and decision-making; it does not establish competition eligibility or guarantee judging results.
+
+### Tool gallery image upgrade
+
+Every one of the 63 catalog entries now has a distinct purpose-specific photographic illustration, a plain-language benefit, and useful alt text. All 63 local WebP files exist, have different SHA-256 hashes, and total approximately 2 MB. Cards lazy-load their previews and use image decoding asynchronously. Seven original image atlases were generated and packed into separate optimized thumbnails; all imagery is fictional, labeled illustrative, and not represented as a measured YouCam result. Desktop gallery count, category filtering, search, tool selection and thumbnail loading were checked in the browser before release.
