@@ -9,3 +9,15 @@ test('receipts bind identity and reject tampering',()=>{const token=receipt('/s2
 test('schema validation checks input unions, required fields and enums',()=>{const s={allOf:[{anyOf:[{type:'object',required:['src_file_id']},{type:'object',required:['src_file_url']}]},{type:'object',required:['scale'],properties:{scale:{type:'integer',enum:[1,2,4]}}}]};assert.deepEqual(validate(s,{src_file_id:'x',scale:2}),[]);assert.ok(validate(s,{scale:8}).length>1)});
 test('upload, create, poll use server credentials only',async()=>{const oldFetch=global.fetch;const calls=[];global.fetch=async(url,options)=>{calls.push({url:String(url),options});if(String(url).endsWith('/file'))return Response.json({data:{files:[{file_id:'file-1',requests:[{url:'https://yce-us.s3-accelerate.amazonaws.com/upload',method:'PUT',headers:{'Content-Type':'image/png'}}]}]}});if(String(url).includes('.amazonaws.com'))return new Response('',{status:200});if(options.method==='POST')return Response.json({data:{task_id:'task-1'}});return Response.json({data:{task_status:'success',results:{url:'https://example.com/result.png'}}})};
 try{const headers={'x-studio-code':'test-studio'};let r=response();await handler({method:'POST',headers,body:{action:'upload',file:{type:'image/png',base64:Buffer.from([137,80,78,71,13,10,26,10,0]).toString('base64')}}},r);assert.equal(r.data.file_id,'file-1');assert.equal(calls[1].options.headers.Authorization,undefined);r=response();await handler({method:'POST',headers,body:{action:'create',tool:'ai_photo_enhance',path:'/s2s/v2.0/task/enhance',parameters:{src_file_id:'file-1',scale:1}}},r);assert.equal(r.statusCode,200);const token=r.data.receipt;assert.ok(!JSON.stringify(r.data).includes('test-only'));r=response();await handler({method:'POST',headers,body:{action:'poll',receipt:token}},r);assert.equal(r.data.data.task_status,'success');assert.equal(calls[2].options.headers.Authorization,'Bearer test-only')}finally{global.fetch=oldFetch}});
+
+// Authentication feedback must agree with the processing access gate.
+test('studio authorization validates access without consuming provider credits',async()=>{
+ const previousKey=process.env.YOUCAM_API_KEY,previousCode=process.env.STUDIO_ACCESS_CODE;
+ process.env.YOUCAM_API_KEY='test-key';process.env.STUDIO_ACCESS_CODE='studio-code';
+ const oldFetch=globalThis.fetch;globalThis.fetch=()=>{throw new Error('Authorization must not call YouCam')};
+ try{
+  let statusCode,payload;const res={setHeader(){},status(n){statusCode=n;return this},json(x){payload=x}};
+  await handler({method:'POST',headers:{'x-studio-code':'studio-code',host:'example.com',origin:'https://example.com'},body:{action:'authorize'}},res);
+  assert.equal(statusCode,200);assert.equal(payload.authorized,true);
+ }finally{globalThis.fetch=oldFetch;if(previousKey===undefined)delete process.env.YOUCAM_API_KEY;else process.env.YOUCAM_API_KEY=previousKey;if(previousCode===undefined)delete process.env.STUDIO_ACCESS_CODE;else process.env.STUDIO_ACCESS_CODE=previousCode}
+});

@@ -20,6 +20,7 @@ export default async function handler(req,res){
  if(!input||typeof input!=='object'||Array.isArray(input))return send(400,{error:'Request body must be an object.'});
  if(Buffer.byteLength(JSON.stringify(input))>3000000)return send(413,{error:'Upload is too large. Use a photo under 2 MB.'});
  try{
+  if(input.action==='authorize')return send(200,{authorized:true});
   if(input.action==='upload'){
    const f=input.file;if(!f||!['image/jpeg','image/png','video/mp4'].includes(f.type)||typeof f.base64!=='string'||!f.base64.match(/^[A-Za-z0-9+/]*={0,2}$/))return send(400,{error:'Please choose a JPG, PNG or MP4 file.'});
    const bytes=Buffer.from(f.base64,'base64');if(!bytes.length||bytes.length>2000000)return send(413,{error:'File must be smaller than 2 MB.'});

@@ -43,3 +43,7 @@ Audience: independent creators, shoppers exploring styles and small merchants pr
 ## API references
 
 [YouCam developer guide](https://docs.perfectcorp.com/develop/introduction), [API reference](https://docs.perfectcorp.com/reference/ai_clothes), [privacy policy](https://www.makeupar.com/perfectbeauty/youcam/privacy-policy-api), [terms](https://www.makeupar.com/perfectbeauty/youcam/terms-of-service-api).
+
+### Personal style experience
+
+The home page now centers on a useful journey: discover an editorial mood, build an occasion-based brief, preview or generate a look, and compare saved possibilities. Three AI-created editorial inspiration edits are bundled locally as optimized WebP assets. They are labeled as inspiration and can be explored without consuming YouCam credits. Actual personal previews use the protected server integration. The brief builder is deterministic curated styling, not an AI assistant. Collection metadata and result links stay on the current device; no uploaded source image is stored locally by the app. A separate server authorization action verifies the studio code without spending provider units.
