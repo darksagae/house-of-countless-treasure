@@ -27,3 +27,13 @@ Short MP4 input support is implemented, with file header/type validation and the
 ### Tool gallery image upgrade
 
 Every one of the 63 catalog entries now has a distinct purpose-specific photographic illustration, a plain-language benefit, and useful alt text. All 63 local WebP files exist, have different SHA-256 hashes, and total approximately 2 MB. Cards lazy-load their previews and use image decoding asynchronously. Seven original image atlases were generated and packed into separate optimized thumbnails; all imagery is fictional, labeled illustrative, and not represented as a measured YouCam result. Desktop gallery count, category filtering, search, tool selection and thumbnail loading were checked in the browser before release.
+
+## Lifetime free allowance implementation — 13 October 2026
+
+- Added Neon managed authentication, email-code sign-in UI, server JWT verification and a persistent five-use quota keyed by a digest of verified email. The auth and quota backend must be provisioned before live free sign-in is advertised as available.
+- Seven new tests exercise the real PostgreSQL quota functions in PGlite, replay/idempotency, simultaneous requests, exact-once refunds, account recreation, upload limits, email alias normalization and JWT rejection. All 16 automated tests pass.
+- Server processing retains the existing protected owner demo path. Free receipts are bound to the verified identity. The database path fails closed on errors.
+- MIT license, third-party notices and contribution instructions added. Provider access and credentials are not granted by the source license.
+- Local browser review confirmed the new account dialog, five-use messaging and disabled sign-in while the service is unconfigured. Live identity and balance checks remain pending activation.
+
+- Created dedicated Neon resource `house-treasure-free-accounts` (`shy-morning-52270400`) on the Free plan, Washington DC region, with Auth enabled. Connected only House of Countless Treasure's Production environment; generated variables are sensitive. No paid plan or automatic provider credit refill was enabled.
