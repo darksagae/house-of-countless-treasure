@@ -1,7 +1,7 @@
 import {NeonDbError} from '@neondatabase/serverless';
 import {readFileSync} from 'node:fs';
 import {createHmac,timingSafeEqual} from 'node:crypto';
-import {freeConfigured,initializeFreeAccess,identify,allowance,reserve,finish,permitUpload} from '../lib/free-access.js';
+import {authBaseURL,freeConfigured,initializeFreeAccess,identify,allowance,reserve,finish,permitUpload} from '../lib/free-access.js';
 import {validate} from '../lib/validation.js';
 const catalog=JSON.parse(readFileSync(new URL('../lib/catalog.json',import.meta.url)));
 const BASE='https://yce-api-01.makeupar.com';
@@ -13,7 +13,7 @@ async function provider(path,method='GET',body){const r=await fetch(BASE+path,{m
 export default async function handler(req,res){
  res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');
  const send=(status,data)=>res.status(status).json(data);
- if(req.method==='GET'){let enabled=false;if(freeConfigured()){try{enabled=await initializeFreeAccess()}catch{enabled=false}}return send(200,{configured:Boolean(process.env.YOUCAM_API_KEY&&process.env.STUDIO_ACCESS_CODE),features:catalog.length,freeAccess:enabled,freeLimit:5,authUrl:enabled?process.env.NEON_AUTH_BASE_URL:null});}
+ if(req.method==='GET'){let enabled=false;if(freeConfigured()){try{enabled=await initializeFreeAccess()}catch{enabled=false}}return send(200,{configured:Boolean(process.env.YOUCAM_API_KEY&&process.env.STUDIO_ACCESS_CODE),features:catalog.length,freeAccess:enabled,freeLimit:5,authUrl:enabled?authBaseURL():null});}
  if(req.method!=='POST'){res.setHeader('Allow','GET, POST');return send(405,{error:'Method not allowed.'})}
  if(!process.env.YOUCAM_API_KEY||!process.env.STUDIO_ACCESS_CODE)return send(503,{error:'Studio connection is not configured yet.'});
  const admin=same(req.headers['x-studio-code'],process.env.STUDIO_ACCESS_CODE);

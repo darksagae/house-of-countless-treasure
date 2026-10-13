@@ -62,3 +62,5 @@ Five slots cover **generation attempts accepted by YouCam**, not five per day. A
 After five creations, users retain access to tool browsing, local collections and sample inspiration. There is no automatic paid upgrade or card collection. This limits each verified email identity, not every possible email a person could own. Additional anti-abuse controls are needed for a large public launch. Free processing uses the owner's finite YouCam credits; exhausted provider credits can stop processing even while an account has slots remaining. No paid subscription or auto-refill is enabled by the application.
 
 For self-hosting, configure your own YouCam key, owner code and Neon resource, then deploy. The Neon Auth SDK is currently a pinned beta; upgrade only with a full sign-in and quota regression check. See [CONTRIBUTING.md](CONTRIBUTING.md), [NOTICE.md](NOTICE.md) and [docs/VERIFICATION.md](docs/VERIFICATION.md).
+
+The Vercel Neon integration’s `POSTGRES_DATABASE_URL` and `POSTGRES_NEON_AUTH_BASE_URL` names are also supported when its custom prefix is POSTGRES.
